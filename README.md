@@ -10,4 +10,6 @@ Put all files in any folder inside the router
 
 Configuration file is settings.sh
 
+Run initial_config.sh
+
 Tool can be launched from ./launch.sh script
