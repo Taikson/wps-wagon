@@ -9,26 +9,45 @@ Build a custom OpenWRT image following those steps:
 
 sudo apt-get install wget git build-essential libncurses5-dev libncursesw5-dev
 zlib1g-dev gawk unzip subversion libssl-dev python netbeans
+
 git clone https://git.lede-project.org/source.git openwrt #clonado repo openwrt
+
 cd openwrt/scripts;
+
 ./feeds update -a;
+
 ./feeds install -a;
+
 cd ../package;
+
 git clone https://github.com/wiire/pixiewps;
+
 git clone https://github.com/aanarchyy/bully;
+
 cd ..
+
 make defconfig
+
 mkdir files
+
 cd files
+
 mkdir wps_wagon
+
 #*Now Copy all *.sh file into wps_wagon folder*
+
 cd ../../
+
 #*Now Copy .config file into openwrt folder (file valid only for A5-V11 router)*
 
+
 make menuconfig
+
 #*exit from menu*
 
+
 make j=4
+
 
 #*wait a lot
 
